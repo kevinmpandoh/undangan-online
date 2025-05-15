@@ -12,10 +12,10 @@ export default function App() {
   const searchParams = useSearchParams();
   const tamuUndangan = searchParams.get("to");
 
-  const nextSectionRef = useRef(null);
+  const nextSectionRef = useRef<HTMLDivElement | null>(null);
   const [allowScroll, setAllowScroll] = useState(false);
 
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
