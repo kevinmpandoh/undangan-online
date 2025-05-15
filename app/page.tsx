@@ -1,103 +1,106 @@
+// src/App.jsx
+"use client";
+import { useRef, useState, useEffect } from "react";
+import HeroSection from "@/components/HeroSection";
+import EventSection from "@/components/EventSection";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import { CirclePlay, CircleStop } from "lucide-react";
+import QuoteSection from "@/components/QuoteSection";
 
-export default function Home() {
+export default function App() {
+  const searchParams = useSearchParams();
+  const tamuUndangan = searchParams.get("to");
+
+  const nextSectionRef = useRef(null);
+  const [allowScroll, setAllowScroll] = useState(false);
+
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    // Saat pertama kali halaman dibuka, scroll ke paling atas
+    window.scrollTo(0, 0);
+
+    // Kunci scroll bila belum diizinkan
+    document.body.style.overflow = allowScroll ? "auto" : "hidden";
+  }, [allowScroll]);
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleOpenInvitation = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+
+    setAllowScroll(true);
+    setTimeout(() => {
+      nextSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100); // delay agar scroll setelah scroll aktif
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <HeroSection
+        onOpen={handleOpenInvitation}
+        tamuUndangan={tamuUndangan ?? "Tamu Undangan"}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section
+        ref={nextSectionRef}
+        className="w-full min-h-screen flex flex-col lg:flex-row relative bg-white"
+      >
+        {/* Sticky Gambar - Desktop Saja */}
+        <div className="hidden lg:block w-full sticky top-0 h-screen">
+          <Image
+            src="/images/image4.jpg"
+            alt="Aurilya"
+            fill
+            style={{ objectFit: "cover" }}
+            className="brightness-95"
+            priority
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Konten Scroll - Background Card Style */}
+        <div className="flex flex-col justify-center items-center w-full lg:w-1/2">
+          <EventSection />
+          <QuoteSection />
+        </div>
+      </section>
+
+      <audio ref={audioRef} src="/music/tes.mp3" loop />
+
+      {/* <div
+        className="fixed bottom-4 right-4 z-50 p-2 bg-white rounded-full shadow-lg cursor-pointer"
+        onClick={toggleMusic}
+      >
+        <Image
+          src={isPlaying ? "/icons/pause.svg" : "/icons/play.svg"}
+          alt="Play/Pause"
+          width={24}
+          height={24}
+        />
+      </div> */}
+
+      <button
+        onClick={toggleMusic}
+        className="fixed bottom-4 right-4 z-50 p-2 bg-gray-300 rounded-full shadow-lg cursor-pointer"
+        // className="px-4 py-3 bg-white text-black rounded-full shadow-lg hover:bg-gray-200 transition"
+        title={isPlaying ? "Pause Musik" : "Mainkan Musik"}
+      >
+        {isPlaying ? <CircleStop /> : <CirclePlay />}
+      </button>
+    </>
   );
 }
