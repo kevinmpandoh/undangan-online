@@ -7,7 +7,7 @@ import bgQuote from "@/public/images/bg-quote.jpg"; // gambar background quote
 
 export default function QuoteSection() {
   return (
-    <section className="w-full py-16 flex justify-center items-center bg-pink-50 relative overflow-hidden">
+    <section className="w-full py-16 flex justify-center items-center bg-blue-50 relative overflow-hidden">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -19,7 +19,7 @@ export default function QuoteSection() {
       />
 
       <motion.div
-        className="relative z-10 bg-white/90 max-w-xl w-full px-6 py-10 rounded-3xl shadow-lg border border-pink-200 text-center backdrop-blur-sm"
+        className="relative z-10 bg-white/90 max-w-xl w-full px-6 py-10 rounded-3xl shadow-lg border border-blue-200 text-center backdrop-blur-sm"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -35,7 +35,7 @@ export default function QuoteSection() {
           />
         </div>
 
-        <h2 className="text-2xl md:text-3xl font-bold text-pink-700 mb-6 tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-700 mb-6 tracking-wide">
           Kalimat Mutiara
         </h2>
 
@@ -45,7 +45,7 @@ export default function QuoteSection() {
           sejahtera akan ditambahkannya kepadamu."
         </p>
 
-        <p className="text-md font-medium text-pink-600 mt-4">— Amsal 3:1-2</p>
+        <p className="text-md font-medium text-blue-600 mt-4">— Amsal 3:1-2</p>
       </motion.div>
     </section>
   );

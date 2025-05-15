@@ -7,6 +7,12 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { CirclePlay, CircleStop } from "lucide-react";
 import QuoteSection from "@/components/QuoteSection";
+import UcapanSalamSection from "@/components/UcapanSalamSection";
+import InformasiAcaraSection from "@/components/InformasiAcara";
+import GaleriFotoSection from "@/components/GaleriFotoSection";
+import CountdownSection from "@/components/CountdownSection";
+import UcapanDoaSection from "@/components/UcapanDoaSection";
+import UcapanTerimaKasihSection from "@/components/UcapanTerimaKasihSection";
 
 export default function App() {
   const searchParams = useSearchParams();
@@ -63,7 +69,7 @@ export default function App() {
         {/* Sticky Gambar - Desktop Saja */}
         <div className="hidden lg:block w-full sticky top-0 h-screen">
           <Image
-            src="/images/image4.jpg"
+            src="/images/image7.jpg"
             alt="Aurilya"
             fill
             style={{ objectFit: "cover" }}
@@ -76,6 +82,12 @@ export default function App() {
         <div className="flex flex-col justify-center items-center w-full lg:w-1/2">
           <EventSection />
           <QuoteSection />
+          <UcapanSalamSection />
+          <InformasiAcaraSection />
+          <GaleriFotoSection />
+          <CountdownSection />
+          <UcapanDoaSection />
+          <UcapanTerimaKasihSection />
         </div>
       </section>
 
@@ -104,3 +116,62 @@ export default function App() {
     </>
   );
 }
+
+// <section className="w-full min-h-screen bg-[#FFF5F5] flex flex-col items-center justify-center text-center px-4 py-8 relative">
+//   {/* Background image / ornament atas */}
+//   <Image
+//     src="/images/header-ornament.png"
+//     alt="Ornamen Atas"
+//     width={300}
+//     height={100}
+//     className="absolute top-0 left-1/2 transform -translate-x-1/2"
+//   />
+
+//   <div className="text-[#7A2D2D] text-sm mb-4">
+//     <p>Syalom Salam Sejahtera,</p>
+//     <p>
+//       Dengan ini kami ingin mengundang kehadiran <br />
+//       Saudara/i untuk menghadiri acara ulang tahun <br />
+//       anak kami:
+//     </p>
+//   </div>
+
+//   <div className="relative mb-4">
+//     {/* Foto anak */}
+//     <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-pink-300 mx-auto relative z-10">
+//       <Image
+//         src="/images/image-bayi.png"
+//         alt="Foto Bayi"
+//         fill
+//         style={{ objectFit: "cover" }}
+//       />
+//     </div>
+
+//     {/* Mahkota */}
+//     <Image
+//       src="/images/crown.png"
+//       alt="Mahkota"
+//       width={40}
+//       height={40}
+//       className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20"
+//     />
+//   </div>
+
+//   <h2 className="text-2xl font-cursive text-pink-700 mb-2">
+//     Aurilya Prinsya Uada
+//   </h2>
+
+//   <p className="text-sm text-gray-700 mb-6">
+//     Putri tercinta dari <br />
+//     <span className="font-semibold text-[#7A2D2D]">
+//       Adi Uada &amp; Putri Antoko
+//     </span>
+//   </p>
+
+//   <Button
+//     onClick={onOpen}
+//     className="bg-pink-500 hover:bg-pink-600 text-white rounded-full px-6 py-3 shadow-lg"
+//   >
+//     Buka Undangan
+//   </Button>
+// </section>;

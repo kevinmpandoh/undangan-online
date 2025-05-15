@@ -18,11 +18,11 @@ export default function EventSection() {
         viewport={{ once: true }}
       >
         <div className="p-6 text-center bg-white/80 backdrop-blur-md">
-          <h2 className="text-3xl font-bold text-pink-600 mb-3 tracking-wide">
+          <h2 className="text-3xl font-bold text-blue-600 mb-3 tracking-wide">
             AURILYA
           </h2>
 
-          <div className="relative w-40 h-52 mx-auto mb-4 rounded-full border-4 border-pink-300 overflow-hidden shadow-lg">
+          <div className="relative w-40 h-52 mx-auto mb-4 rounded-full border-4 border-blue-300 overflow-hidden shadow-lg">
             <img
               src={"https://placehold.co/160x160/png?text"}
               alt="Foto Anak"
@@ -32,7 +32,7 @@ export default function EventSection() {
           </div>
 
           <p className="text-md text-gray-700 mb-1">Birthday Party</p>
-          <p className="text-lg font-semibold text-pink-500">Kamis, 29 Mei</p>
+          <p className="text-lg font-semibold text-blue-500">Kamis, 29 Mei</p>
         </div>
       </motion.div>
     </>
