@@ -43,7 +43,7 @@ export default function InformasiAcaraSection() {
             <span className="font-semibold">Lokasi Acara</span>
           </div>
           <p className="text-lg font-semibold text-blue-700">
-            Kel. Uada - Antoko
+            Kel. Supit - Kairupan
           </p>
 
           <p className="text-sm text-gray-800">

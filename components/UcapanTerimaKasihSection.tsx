@@ -2,7 +2,7 @@ import React from "react";
 
 const UcapanTerimaKasihSection = () => {
   return (
-    <section className="text-center py-16 px-4 bg-blue-50 relative">
+    <section className="text-center py-16 px-4 bg-blue-50 ">
       <p className="text-lg md:text-xl font-medium text-gray-800 mb-4">
         Atas Doa dan Kehadiran dari Teman – Teman
       </p>

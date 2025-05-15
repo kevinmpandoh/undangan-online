@@ -24,7 +24,7 @@ export default function EventSection() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold text-blue-600 mb-3 tracking-wide">
-          AURILYA
+          HAWKINS
         </h2>
 
         <div className="relative w-40 h-52 mx-auto mb-4 rounded-full border-4 border-blue-300 overflow-hidden shadow-lg">

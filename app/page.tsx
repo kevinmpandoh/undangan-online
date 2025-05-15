@@ -13,6 +13,7 @@ import GaleriFotoSection from "@/components/GaleriFotoSection";
 import CountdownSection from "@/components/CountdownSection";
 import UcapanDoaSection from "@/components/UcapanDoaSection";
 import UcapanTerimaKasihSection from "@/components/UcapanTerimaKasihSection";
+import ReservasiSection from "@/components/ReservasiSection";
 
 export default function App() {
   const searchParams = useSearchParams();
@@ -87,6 +88,7 @@ export default function App() {
           <GaleriFotoSection />
           <CountdownSection />
           <UcapanDoaSection />
+          <ReservasiSection />
           <UcapanTerimaKasihSection />
         </div>
       </section>
