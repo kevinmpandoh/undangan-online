@@ -80,7 +80,7 @@ export default function App() {
         </div>
 
         {/* Konten Scroll - Background Card Style */}
-        <div className="flex flex-col justify-center items-center w-full lg:w-1/2">
+        <div className="flex flex-col w-full justify-center items-center ">
           <EventSection />
           <QuoteSection />
           <UcapanSalamSection />

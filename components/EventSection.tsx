@@ -2,42 +2,52 @@
 
 import { motion } from "framer-motion";
 import bgEvent from "../public/images/bgEvent.png";
+import Image from "next/image";
 
 export default function EventSection() {
   return (
-    <section className="w-full h-[900px] flex justify-center items-center relative overflow-hidden">
-      {/* Background dummy dengan bunga */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${bgEvent.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-
+    <section
+      className="relative w-full h-screen flex items-center justify-center"
+      style={{
+        backgroundImage: `url(${bgEvent.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <motion.div
-        className="relative z-10  w-[80%] px-6 py-10  text-center"
+        className="z-30 flex flex-col items-center text-center  text-white px-4"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-blue-600 mb-3 tracking-wide">
-          HAWKINS
-        </h2>
-
-        <div className="relative w-40 h-52 mx-auto mb-4 rounded-full border-4 border-blue-300 overflow-hidden shadow-lg">
-          <img
-            src={"https://placehold.co/160x160/png?text"}
+        <div className="relative w-full h-full mx-auto mb-4 rounded-full  overflow-hidden shadow-lg">
+          <Image
+            src={"/images/imageEvent.svg"}
             alt="Foto Anak"
             // fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", backgroundPosition: "center" }}
+            width={300}
+            height={300}
           />
         </div>
 
-        <p className="text-md text-gray-700 mb-1">Birthday Party</p>
-        <p className="text-lg font-semibold text-blue-500">Kamis, 29 Mei</p>
+        <div className="">
+          <Image
+            src={"/images/textEvent.svg"}
+            alt="Foto Anak"
+            // fill
+            // style={{ objectFit: "cover" }}
+            width={300}
+            height={300}
+          />
+          {/* <p className="text-4xl  text-[#52b3ec] mb-1 font-[egizio] font-bold">
+            Birthday Party
+          </p>
+          <p className="text-2xl font-semibold text-[#52b3ec] font-[egizio]">
+            KAMIS, <span className="text-[#d60000] text-4xl">29</span> MEI
+          </p> */}
+        </div>
       </motion.div>
     </section>
   );
