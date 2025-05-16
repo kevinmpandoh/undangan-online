@@ -38,7 +38,7 @@ export default function ReservasiSection() {
   };
 
   return (
-    <section className="py-16 px-8 bg-blue-50 min-h-[80vh] w-full">
+    <section className="py-16 px-8 bg-amber-50 min-h-[80vh] w-full">
       <div className="px-4 py-8  bg-white/70 rounded-lg shadow-md mx-auto text-center">
         <h2 className="text-xl font-bold mb-4">Konfirmasi Kehadiran</h2>
 
@@ -49,7 +49,7 @@ export default function ReservasiSection() {
             value={form.nama}
             onChange={(e) => setForm({ ...form, nama: e.target.value })}
             required
-            className="w-full rounded-lg border border-blue-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300"
           />
 
           <input
@@ -57,14 +57,14 @@ export default function ReservasiSection() {
             placeholder="Nomor WhatsApp"
             value={form.nomor}
             onChange={(e) => setForm({ ...form, nomor: e.target.value })}
-            className="w-full rounded-lg border border-blue-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300"
           />
 
           <select
             value={form.kehadiran}
             onChange={(e) => setForm({ ...form, kehadiran: e.target.value })}
             required
-            className="w-full rounded-lg border border-blue-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300"
           >
             <option value="">- Konfirmasi Kehadiran -</option>
             <option value="Hadir">Hadir</option>
@@ -97,7 +97,7 @@ export default function ReservasiSection() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-pink-600 text-white font-semibold py-2 rounded hover:bg-pink-700"
+            className="w-full bg-amber-600 text-white font-semibold py-2 rounded hover:bg-pink-700"
           >
             {loading ? "Mengirim..." : "Kirim Reservasi"}
           </button>

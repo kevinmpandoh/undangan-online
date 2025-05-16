@@ -33,20 +33,71 @@ export default function App() {
     document.body.style.overflow = allowScroll ? "auto" : "hidden";
   }, [allowScroll]);
 
+  const fadeInAudio = () => {
+    if (!audioRef.current) return;
+
+    audioRef.current.volume = 0;
+    audioRef.current.play();
+
+    let currentVolume = 0;
+    const targetVolume = 0.5;
+    const step = 0.01;
+    const interval = 150; // in milliseconds
+
+    const fadeInInterval = setInterval(() => {
+      if (!audioRef.current) {
+        clearInterval(fadeInInterval);
+        return;
+      }
+
+      currentVolume += step;
+      if (currentVolume >= targetVolume) {
+        audioRef.current.volume = targetVolume;
+        clearInterval(fadeInInterval);
+      } else {
+        audioRef.current.volume = currentVolume;
+      }
+    }, interval);
+  };
+
+  const fadeOutAudio = () => {
+    if (!audioRef.current) return;
+
+    let currentVolume = audioRef.current.volume;
+    const step = 0.01;
+    const interval = 10;
+
+    const fadeOutInterval = setInterval(() => {
+      if (!audioRef.current) {
+        clearInterval(fadeOutInterval);
+        return;
+      }
+
+      currentVolume -= step;
+      if (currentVolume <= 0) {
+        audioRef.current.volume = 0;
+        audioRef.current.pause();
+        clearInterval(fadeOutInterval);
+      } else {
+        audioRef.current.volume = currentVolume;
+      }
+    }, interval);
+  };
+
   const toggleMusic = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
-      audioRef.current.pause();
+      fadeOutAudio();
       setIsPlaying(false);
     } else {
-      audioRef.current.play();
+      fadeInAudio();
       setIsPlaying(true);
     }
   };
 
   const handleOpenInvitation = () => {
     if (audioRef.current) {
-      audioRef.current.play();
+      fadeInAudio();
       setIsPlaying(true);
     }
 
@@ -80,7 +131,7 @@ export default function App() {
         </div>
 
         {/* Konten Scroll - Background Card Style */}
-        <div className="flex flex-col w-full justify-center items-center ">
+        <div className="flex flex-col w-full max-w-xl justify-center items-center ">
           <EventSection />
           <QuoteSection />
           <UcapanSalamSection />
@@ -93,7 +144,7 @@ export default function App() {
         </div>
       </section>
 
-      <audio ref={audioRef} src="/music/tes.mp3" loop />
+      <audio ref={audioRef} src="/music/HappyBirthday.mp3" loop />
 
       {/* <div
         className="fixed bottom-4 right-4 z-50 p-2 bg-white rounded-full shadow-lg cursor-pointer"
@@ -107,14 +158,16 @@ export default function App() {
         />
       </div> */}
 
-      <button
-        onClick={toggleMusic}
-        className="fixed bottom-4 right-4 z-50 p-2 bg-gray-300 rounded-full shadow-lg cursor-pointer"
-        // className="px-4 py-3 bg-white text-black rounded-full shadow-lg hover:bg-gray-200 transition"
-        title={isPlaying ? "Pause Musik" : "Mainkan Musik"}
-      >
-        {isPlaying ? <CircleStop /> : <CirclePlay />}
-      </button>
+      {allowScroll && (
+        <button
+          onClick={toggleMusic}
+          className="fixed bottom-4 right-4 z-50 p-2 bg-gray-300 rounded-full shadow-lg cursor-pointer"
+          // className="px-4 py-3 bg-white text-black rounded-full shadow-lg hover:bg-gray-200 transition"
+          title={isPlaying ? "Pause Musik" : "Mainkan Musik"}
+        >
+          {isPlaying ? <CircleStop /> : <CirclePlay />}
+        </button>
+      )}
     </>
   );
 }

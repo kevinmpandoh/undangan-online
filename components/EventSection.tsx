@@ -1,17 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import bgEvent from "../public/images/bgEvent.png";
+import bgEvent from "../public/images/bgEvent3.png";
 import Image from "next/image";
 
 export default function EventSection() {
   return (
+    // <section
+    //   className="relative w-full h-screen flex items-center justify-center"
+    //   style={{
+    //     backgroundImage: `url(${bgEvent.src})`,
+    //     backgroundSize: "cover",
+    //     backgroundPosition: "center",
+    //   }}
+    // >
+    // <section
+    //   className="relative w-full h-screen flex items-center justify-center bg-no-repeat bg-center bg-cover sm:bg-contain sm:bg-top"
+    //   style={{
+    //     backgroundImage: `url(${bgEvent.src})`,
+    //   }}
+    // >
+
+    // <section
+    //   className="relative w-full h-screen max-w-[1480px] mx-auto aspect-video
+    //          flex items-center justify-center bg-no-repeat bg-center bg-cover
+    //          sm:bg-contain sm:bg-top"
+    //   style={{
+    //     backgroundImage: `url(${bgEvent.src})`,
+    //   }}
+    // >
+
     <section
-      className="relative w-full h-screen flex items-center justify-center"
+      className="relative w-full min-h-screen flex items-center justify-center bg-center bg-no-repeat 
+             bg-cover sm:bg-contain sm:bg-top"
       style={{
         backgroundImage: `url(${bgEvent.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
       }}
     >
       <motion.div
@@ -21,7 +44,7 @@ export default function EventSection() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="relative w-full h-full mx-auto mb-4 rounded-full  overflow-hidden shadow-lg">
+        {/* <div className="relative w-full h-full mx-auto mb-4 rounded-full  overflow-hidden shadow-lg">
           <Image
             src={"/images/imageEvent.svg"}
             alt="Foto Anak"
@@ -30,9 +53,9 @@ export default function EventSection() {
             width={300}
             height={300}
           />
-        </div>
+        </div> */}
 
-        <div className="">
+        {/* <div className="">
           <Image
             src={"/images/textEvent.svg"}
             alt="Foto Anak"
@@ -40,14 +63,14 @@ export default function EventSection() {
             // style={{ objectFit: "cover" }}
             width={300}
             height={300}
-          />
-          {/* <p className="text-4xl  text-[#52b3ec] mb-1 font-[egizio] font-bold">
+          /> */}
+        {/* <p className="text-4xl  text-[#52b3ec] mb-1 font-[egizio] font-bold">
             Birthday Party
           </p>
           <p className="text-2xl font-semibold text-[#52b3ec] font-[egizio]">
             KAMIS, <span className="text-[#d60000] text-4xl">29</span> MEI
           </p> */}
-        </div>
+        {/* </div> */}
       </motion.div>
     </section>
   );

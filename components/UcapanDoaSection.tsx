@@ -77,9 +77,9 @@ export default function UcapanDoaSection() {
   };
 
   return (
-    <section className="py-16 px-8 bg-blue-50 min-h-screen w-full">
+    <section className="py-16 px-8 bg-amber-50 min-h-screen w-full">
       <div className="w-full mx-auto">
-        <h2 className="text-center text-3xl font-bold text-blue-700 mb-8">
+        <h2 className="text-center text-3xl font-bold text-amber-700 mb-8">
           Ucapan & Doa
         </h2>
 
@@ -89,18 +89,18 @@ export default function UcapanDoaSection() {
             placeholder="Tulis Nama"
             value={form.nama}
             onChange={(e) => setForm({ ...form, nama: e.target.value })}
-            className="w-full rounded-lg border border-blue-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300"
           />
           <textarea
             rows={3}
             placeholder="Sampaikan Pesan dan Ucapan"
             value={form.pesan}
             onChange={(e) => setForm({ ...form, pesan: e.target.value })}
-            className="w-full rounded-lg border border-blue-300 px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-amber-300"
           />
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition"
+            className="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 rounded-lg transition"
           >
             KIRIM UCAPAN
           </button>
@@ -110,11 +110,11 @@ export default function UcapanDoaSection() {
           {ucapanList.map((ucapan: ucapan, index: number) => (
             <div
               key={index}
-              className="bg-white border border-blue-200 shadow rounded-lg px-4 py-3 flex gap-3 items-start"
+              className="bg-white border border-amber-200 shadow rounded-lg px-4 py-3 flex gap-3 items-start"
             >
               <InitialAvatar name={ucapan.nama} />
               <div>
-                <p className="font-semibold text-blue-700">{ucapan.nama}</p>
+                <p className="font-semibold text-amber-700">{ucapan.nama}</p>
                 <p className="text-sm text-gray-800 whitespace-pre-wrap">
                   {ucapan.pesan}
                 </p>

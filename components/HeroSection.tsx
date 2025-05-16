@@ -36,7 +36,7 @@ export default function HeroSection({
         <h1 className="text-4xl md:text-4xl font-bold mb-2">Hawkins Supit</h1>
         <p className="text-xl md:text-2xl mb-1">BIRTHDAY PARTY</p>
         <p className="mt-4 text-md md:text-lg">Dear :</p>
-        <p className="text-2xl md:text-3xl font-semibold italic text-blue-300">
+        <p className="text-2xl md:text-3xl font-semibold italic text-amber-300">
           {tamuUndangan}
         </p>
         <p className="text-sm mt-2 italic">
@@ -47,7 +47,7 @@ export default function HeroSection({
           onClick={onOpen}
           className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full flex items-center gap-2 shadow-lg hover:bg-gray-200 transition"
         >
-          <MailOpen className="text-blue-500" />
+          <MailOpen className="text-amber-500" />
           BUKA UNDANGAN
         </button>
       </motion.div>

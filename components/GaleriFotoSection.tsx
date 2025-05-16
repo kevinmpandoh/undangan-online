@@ -33,14 +33,14 @@ export default function GaleriFotoSection() {
   };
 
   return (
-    <section className="py-16 bg-blue-50 relative overflow-hidden">
+    <section className="py-16 bg-amber-50 relative overflow-hidden">
       {/* Hiasan Bunga Dummy */}
       <div className="absolute top-0 left-0 right-0 flex justify-center z-0">
-        <div className="w-full max-w-2xl h-32 bg-blue-200 rounded-b-[80%] opacity-50" />
+        <div className="w-full max-w-2xl h-32 bg-amber-200 rounded-b-[80%] opacity-50" />
       </div>
 
       <div className="relative z-10 text-center mt-32">
-        <h2 className="text-4xl font-bold text-blue-700 font-[cursive]">
+        <h2 className="text-4xl font-bold text-amber-700 font-[cursive]">
           Galeri
         </h2>
       </div>
