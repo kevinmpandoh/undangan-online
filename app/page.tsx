@@ -60,34 +60,11 @@ export default function App() {
     }, interval);
   };
 
-  const fadeOutAudio = () => {
-    if (!audioRef.current) return;
-
-    let currentVolume = audioRef.current.volume;
-    const step = 0.01;
-    const interval = 10;
-
-    const fadeOutInterval = setInterval(() => {
-      if (!audioRef.current) {
-        clearInterval(fadeOutInterval);
-        return;
-      }
-
-      currentVolume -= step;
-      if (currentVolume <= 0) {
-        audioRef.current.volume = 0;
-        audioRef.current.pause();
-        clearInterval(fadeOutInterval);
-      } else {
-        audioRef.current.volume = currentVolume;
-      }
-    }, interval);
-  };
-
   const toggleMusic = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
-      fadeOutAudio();
+      audioRef.current.pause();
+
       setIsPlaying(false);
     } else {
       fadeInAudio();

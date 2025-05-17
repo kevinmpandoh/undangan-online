@@ -52,13 +52,17 @@ const UcapanTerimaKasihSection = () => {
 
         <div className="flex flex-col">
           <a
-            href="www.instagram.com"
+            href="https://www.instagram.com/kevin_pandoh?igsh=d3dkNmlidTA2NWt5"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-amber-600 mt-1 font-[cursive] cursor-pointer hover:underline"
           >
             @kevin_pandoh
           </a>
           <a
-            href="www.instagram.com"
+            href="https://www.instagram.com/shin1331?igsh=MXB6eGpmYXJ3MGJmcg=="
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-amber-600 mt-1 font-[cursive] cursor-pointer hover:underline"
           >
             @_shin1331_
