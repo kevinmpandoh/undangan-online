@@ -54,13 +54,6 @@ export default function HeroSection({
           {opened ? <MailOpen /> : <Mail />}
           BUKA UNDANGAN
         </button>
-
-        {/* <button
-          type="submit"
-          className="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-normal py-2 px-6 rounded-full transition"
-        >
-          KIRIM UCAPAN
-        </button> */}
       </motion.div>
     </section>
   );

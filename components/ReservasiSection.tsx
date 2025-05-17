@@ -2,7 +2,6 @@
 
 import { supabase } from "@/lib/supabaseClinet";
 import { useState } from "react";
-import Image from "next/image";
 import bgReservasi from "@/public/images/reservasiBg.png"; // file gambar karakter one piece
 
 export default function ReservasiSection() {

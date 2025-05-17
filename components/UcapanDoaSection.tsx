@@ -4,13 +4,6 @@ import { supabase } from "@/lib/supabaseClinet";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-// Gambar karakter & dekorasi
-// import sanji from "@/public/images/sanji.png";
-// import zoro from "@/public/images/zoro.png";
-// import luffy from "@/public/images/luffy-sit.png";
-// import kayuBanner from "@/public/images/papan.png";
-// import babyImage from "@/public/images/baby-avatar.jpg"; // optional: untuk semua avatar sama
-
 interface Ucapan {
   nama: string;
   pesan: string;
@@ -112,9 +105,6 @@ export default function UcapanDoaSection() {
           width={120}
           height={120}
         />
-        {/* <h2 className="absolute top-1/2 -translate-y-1/2 text-xl md:text-2xl font-bold text-brown-700">
-          Ucapan & Doa
-        </h2> */}
       </div>
 
       {/* Form Input */}

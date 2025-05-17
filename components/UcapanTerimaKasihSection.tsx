@@ -6,14 +6,6 @@ import bgOnePiece from "@/public/images/bg2.png"; // Gambar yang kamu upload
 const UcapanTerimaKasihSection = () => {
   return (
     <section className="relative w-full min-h-screen text-center bg-[#f2f2ed] overflow-hidden">
-      {/* Background karakter */}
-      {/* <Image
-        src={bgOnePiece}
-        alt="One Piece Background"
-        fill
-        className="object-contain object-bottom opacity-30 pointer-events-none -z-10"
-      /> */}
-
       <div
         className="absolute bottom-0 inset-0 z-0 object-bottom h-screen"
         style={{

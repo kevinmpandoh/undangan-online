@@ -60,13 +60,13 @@ export default function UcapanSalamSection() {
       </motion.div>
 
       {/* Karakter One Piece */}
-      <div className="absolute bottom-0 left-4 w-48 md:w-48">
+      <div className="absolute bottom-0 left-2 w-46 md:w-48">
         <Image
           src={"/images/ussop.svg"}
           alt="Usopp"
           width={80}
           height={80}
-          className="w-[130px] xl:w-[130px] h-auto"
+          className="w-[120px] xl:w-[130px] h-auto"
         />
       </div>
       <div className="absolute -bottom-8 -right-15 xl:-right-5 w-56 md:w-48">

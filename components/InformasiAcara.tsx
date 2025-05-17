@@ -1,15 +1,7 @@
 "use client";
 
-import {
-  CalendarDays,
-  CalendarIcon,
-  HomeIcon,
-  MapPin,
-  MapPinIcon,
-  MapPinned,
-} from "lucide-react";
+import { CalendarDays, MapPin, MapPinned } from "lucide-react";
 import { motion } from "framer-motion";
-import bgEvent from "../public/images/informasiAcaraBg.png";
 import backgroundImage from "../public/images/infoAcaraBg.png"; // bisa gunakan background dengan corak emasimport Image from "next/image";
 import Image from "next/image";
 
