@@ -43,11 +43,18 @@ export default function EventSection() {
         {/* Foto Anak */}
         <div className="relative mt-4 mb-4">
           <Image
-            src="/images/cardEvent2.png" // ganti dengan foto anak
-            alt="Foto Anak"
+            src="/images/cardEvent.png" // ganti dengan foto anak
+            alt="CARD"
             width={250}
             height={250}
             className="rounded-xl h-[450px] lg:h-[480px] w-auto"
+          />
+          <Image
+            src="/images/hawkins.svg" // ganti dengan foto anak
+            alt="CARD"
+            width={90}
+            height={90}
+            className="absolute top-1/3 left-1/5 rounded-xl h-[190px] lg:h-[180px] w-auto"
           />
           <div className="absolute bottom-5 text-center w-full">
             {/* BIRTHDAY PARTY */}
