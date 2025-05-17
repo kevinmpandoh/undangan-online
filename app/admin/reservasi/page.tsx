@@ -54,10 +54,9 @@ export default function AdminReservasiPage() {
   }, []);
 
   return (
-    <>
-      {" "}
+    <div className="bg-amber-100 min-h-screen py-20">
       {/* Statistik */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-center max-w-2xl mx-auto mt-20">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-center max-w-2xl mx-auto ">
         <div className="bg-purple-100 p-4 rounded-lg shadow">
           <p className="text-sm font-semibold text-purple-600">Total Tamu</p>
           <p className="text-xl font-bold">{statistik.totalTamu}</p>
@@ -117,6 +116,6 @@ export default function AdminReservasiPage() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }

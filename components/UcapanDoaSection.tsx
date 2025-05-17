@@ -45,10 +45,14 @@ function InitialAvatar({ name }: { name: string }) {
 export default function UcapanDoaSection() {
   const [form, setForm] = useState({ nama: "", pesan: "" });
   const [ucapanList, setUcapanList] = useState<Ucapan[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchUcapan().then((res) => {
-      if (res) setUcapanList(res);
+      if (res) {
+        setUcapanList(res);
+        setLoading(false);
+      }
     });
   }, []);
 
@@ -140,23 +144,26 @@ export default function UcapanDoaSection() {
         </button>
       </form>
 
-      {/* List Ucapan */}
-      <div className="max-h-64 w-[80%] mx-auto overflow-y-auto space-y-4 my-4">
-        {ucapanList.map((ucapan: Ucapan, index: number) => (
-          <div
-            key={index}
-            className="bg-[#f2ece5] rounded-lg px-4 py-3 flex gap-3 items-start"
-          >
-            <InitialAvatar name={ucapan.nama} />
-            <div>
-              <p className=" text-amber-600">{ucapan.nama}</p>
-              <p className="text-sm text-gray-800 whitespace-pre-wrap">
-                {ucapan.pesan}
-              </p>
+      {loading ? (
+        <p>Memuat data...</p>
+      ) : (
+        <div className="max-h-64 w-[80%] mx-auto overflow-y-auto space-y-4 my-4">
+          {ucapanList?.map((ucapan: Ucapan, index: number) => (
+            <div
+              key={index}
+              className="bg-[#f2ece5] rounded-lg px-4 py-3 flex gap-3 items-start"
+            >
+              <InitialAvatar name={ucapan.nama} />
+              <div>
+                <p className=" text-amber-600">{ucapan.nama}</p>
+                <p className="text-sm text-gray-800 whitespace-pre-wrap">
+                  {ucapan.pesan}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
