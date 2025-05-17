@@ -123,14 +123,14 @@ export default function UcapanDoaSection() {
           placeholder="Tulis Nama"
           value={form.nama}
           onChange={(e) => setForm({ ...form, nama: e.target.value })}
-          className="w-full rounded-lg border border-yellow-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
+          className="w-full rounded-lg border text-gray-800 border-yellow-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
         />
         <textarea
           rows={3}
           placeholder="Sampaikan Pesan dan Ucapan Kamu"
           value={form.pesan}
           onChange={(e) => setForm({ ...form, pesan: e.target.value })}
-          className="w-full rounded-lg border border-yellow-300 px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-yellow-300"
+          className="w-full rounded-lg border text-gray-800 border-yellow-300 px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-yellow-300"
         />
         <button
           type="submit"

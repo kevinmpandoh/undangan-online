@@ -64,7 +64,7 @@ export default function ReservasiSection() {
             value={form.nama}
             onChange={(e) => setForm({ ...form, nama: e.target.value })}
             required
-            className="w-full rounded-full bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
+            className="w-full rounded-full text-gray-800 bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
           />
 
           <input
@@ -72,14 +72,14 @@ export default function ReservasiSection() {
             placeholder="No. Wa"
             value={form.nomor}
             onChange={(e) => setForm({ ...form, nomor: e.target.value })}
-            className="w-full rounded-full bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
+            className="w-full rounded-full text-gray-800 bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
           />
 
           <select
             value={form.kehadiran}
             onChange={(e) => setForm({ ...form, kehadiran: e.target.value })}
             required
-            className="w-full rounded-full bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
+            className="w-full rounded-full text-gray-800 bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
           >
             <option value="">- Konfirmasi Kehadiran -</option>
             <option value="Hadir">Hadir</option>

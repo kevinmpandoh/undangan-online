@@ -77,7 +77,7 @@ export default function GaleriFotoSection() {
             <X size={36} />
           </button>
           <button
-            className="absolute p-2 left-10 text-white text-3xl cursor-pointer hover:bg-white/10 hover:rounded-full"
+            className="absolute p-2 left-2 lg:left-10 text-white text-3xl cursor-pointer hover:bg-white/10 hover:rounded-full"
             onClick={prevPhoto}
           >
             <ChevronLeft size={48} />
@@ -85,10 +85,10 @@ export default function GaleriFotoSection() {
           <img
             src={images[photoIndex]}
             alt={`Foto ${photoIndex + 1}`}
-            className="max-w-full max-h-[90vh] rounded-lg shadow-lg"
+            className="max-w-[90%] max-h-[90vh]  rounded-lg shadow-lg"
           />
           <button
-            className="absolute p-2 right-10 text-white text-3xl cursor-pointer hover:bg-white/10 hover:rounded-full"
+            className="absolute p-2 right-2 lg:right-10 text-white text-3xl cursor-pointer hover:bg-white/10 hover:rounded-full"
             onClick={nextPhoto}
           >
             <ChevronRight size={48} />
