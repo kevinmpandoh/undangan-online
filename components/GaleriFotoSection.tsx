@@ -5,12 +5,12 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 
 const images = [
-  "https://placehold.co/600x500?text=Foto+1&font=playfair",
+  "/images/image7.jpg",
+  "/images/image3.jpg",
+  "/images/image8.jpg",
+  "/images/image5.jpg",
   "/images/image4.jpg",
-  "https://placehold.co/600x500?text=Foto+3&font=playfair",
-  "https://placehold.co/600x700?text=Foto+4&font=playfair",
-  "https://placehold.co/600x800?text=Foto+5&font=playfair",
-  "https://placehold.co/600x500?text=Foto+6&font=playfair",
+  "/images/image7.jpg",
 ];
 
 export default function GaleriFotoSection() {
@@ -46,7 +46,7 @@ export default function GaleriFotoSection() {
       </div>
 
       <motion.div
-        className="columns-2 md:columns-3 gap-4 space-y-4 px-4 md:px-16 mt-10"
+        className="columns-2 md:columns-3 gap-4 space-y-4 px-4 md:px-16 mt-10 mb-28"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -62,6 +62,10 @@ export default function GaleriFotoSection() {
           />
         ))}
       </motion.div>
+
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center z-0">
+        <div className="w-full max-w-2xl h-32 bg-amber-200 rounded-t-[80%] opacity-50" />
+      </div>
 
       {/* Modal Lightbox */}
       {isOpen && (

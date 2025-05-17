@@ -1,77 +1,107 @@
 "use client";
 
 import { motion } from "framer-motion";
-import bgEvent from "../public/images/bgEvent3.png";
 import Image from "next/image";
 
 export default function EventSection() {
   return (
-    // <section
-    //   className="relative w-full h-screen flex items-center justify-center"
-    //   style={{
-    //     backgroundImage: `url(${bgEvent.src})`,
-    //     backgroundSize: "cover",
-    //     backgroundPosition: "center",
-    //   }}
-    // >
-    // <section
-    //   className="relative w-full h-screen flex items-center justify-center bg-no-repeat bg-center bg-cover sm:bg-contain sm:bg-top"
-    //   style={{
-    //     backgroundImage: `url(${bgEvent.src})`,
-    //   }}
-    // >
+    <section className="relative w-full min-h-screen bg-[#faf2e1] flex items-center justify-center overflow-hidden">
+      {/* Background Hiasan Atas */}
+      <Image
+        src="/images/decor-top.svg" // ganti dengan src sesuai hiasan
+        alt="Decor Top"
+        width={600}
+        height={50}
+        className="absolute top-0"
+      />
 
-    // <section
-    //   className="relative w-full h-screen max-w-[1480px] mx-auto aspect-video
-    //          flex items-center justify-center bg-no-repeat bg-center bg-cover
-    //          sm:bg-contain sm:bg-top"
-    //   style={{
-    //     backgroundImage: `url(${bgEvent.src})`,
-    //   }}
-    // >
-
-    <section
-      className="relative w-full min-h-screen flex items-center justify-center bg-center bg-no-repeat 
-             bg-cover sm:bg-contain sm:bg-top"
-      style={{
-        backgroundImage: `url(${bgEvent.src})`,
-      }}
-    >
       <motion.div
-        className="z-30 flex flex-col items-center text-center  text-white px-4"
+        className="z-10 flex flex-col items-center text-center px-4"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        {/* <div className="relative w-full h-full mx-auto mb-4 rounded-full  overflow-hidden shadow-lg">
+        {/* Nama Anak */}
+        <div className="relative z-30 w-full flex justify-center">
           <Image
-            src={"/images/imageEvent.svg"}
-            alt="Foto Anak"
-            // fill
-            style={{ objectFit: "cover", backgroundPosition: "center" }}
-            width={300}
-            height={300}
+            src={"/images/nama.svg"}
+            width={220}
+            height={100}
+            alt="Nama"
+            className="w-[180px] lg:w-[280px] h-auto absolute top-10"
           />
-        </div> */}
-
-        {/* <div className="">
           <Image
-            src={"/images/textEvent.svg"}
+            src="/images/skull.svg" // ganti dengan ikon topi jerami
+            alt="Pirate Icon"
+            width={80}
+            height={80}
+            className="absolute -top-10"
+          />
+        </div>
+
+        {/* Foto Anak */}
+        <div className="relative mt-4 mb-4">
+          <Image
+            src="/images/cardEvent2.png" // ganti dengan foto anak
             alt="Foto Anak"
-            // fill
-            // style={{ objectFit: "cover" }}
-            width={300}
-            height={300}
-          /> */}
-        {/* <p className="text-4xl  text-[#52b3ec] mb-1 font-[egizio] font-bold">
-            Birthday Party
-          </p>
-          <p className="text-2xl font-semibold text-[#52b3ec] font-[egizio]">
-            KAMIS, <span className="text-[#d60000] text-4xl">29</span> MEI
-          </p> */}
-        {/* </div> */}
+            width={250}
+            height={250}
+            className="rounded-xl h-[350px] lg:h-[480px] w-auto"
+          />
+          <div className="absolute bottom-5 text-center w-full">
+            {/* BIRTHDAY PARTY */}
+            <h2 className="text-xl  lg:text-3xl mb-1 tracking-wider font-lilita lg:text-stroke-white font-extrabold text-gray-900">
+              BIRTHDAY PARTY
+            </h2>
+
+            {/* Tanggal */}
+            <p className="text-xl lg:text-4xl font-bold text-white font-lilita lg:text-stroke-black">
+              KAMIS,{" "}
+              <span className="text-[#d60000] text-xl lg:text-7xl lg:text-stroke-white">
+                29
+              </span>{" "}
+              MEI
+            </p>
+          </div>
+        </div>
       </motion.div>
+
+      {/* Balon Kiri */}
+      <Image
+        src="/images/balloons-left.svg"
+        alt="Balloons Left"
+        width={100}
+        height={300}
+        className="absolute h-[220px] lg:h-[300px] w-auto -left-8 lg:left-0 top-1/3 z-40"
+      />
+
+      {/* Balon Kanan */}
+      <Image
+        src="/images/balloons-right.svg"
+        alt="Balloons Right"
+        width={100}
+        height={300}
+        className="absolute h-[220px] lg:h-[300px] w-auto -right-10 lg:-right-8 top-1/3 z-40"
+      />
+
+      {/* Karakter Kiri (Luffy) */}
+      <Image
+        src="/images/luffy.svg"
+        alt="Luffy"
+        width={80}
+        height={120}
+        className="w-[80px] lg:w-[100px] h-auto absolute bottom-0 left-4"
+      />
+
+      {/* Karakter Kanan (Sanji) */}
+      <Image
+        src="/images/sabo.svg"
+        alt="Sabo"
+        width={120}
+        height={180}
+        className="w-[120px] lg:w-[150px] h-auto absolute -bottom-1 right-4"
+      />
     </section>
   );
 }

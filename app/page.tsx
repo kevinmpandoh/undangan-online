@@ -146,87 +146,20 @@ export default function App() {
 
       <audio ref={audioRef} src="/music/HappyBirthday.mp3" loop />
 
-      {/* <div
-        className="fixed bottom-4 right-4 z-50 p-2 bg-white rounded-full shadow-lg cursor-pointer"
-        onClick={toggleMusic}
-      >
-        <Image
-          src={isPlaying ? "/icons/pause.svg" : "/icons/play.svg"}
-          alt="Play/Pause"
-          width={24}
-          height={24}
-        />
-      </div> */}
-
       {allowScroll && (
         <button
           onClick={toggleMusic}
-          className="fixed bottom-4 right-4 z-50 p-2 bg-gray-300 rounded-full shadow-lg cursor-pointer"
+          className="fixed bottom-4 right-4 z-50 p-2  bg-amber-300 rounded-full shadow-lg cursor-pointer"
           // className="px-4 py-3 bg-white text-black rounded-full shadow-lg hover:bg-gray-200 transition"
           title={isPlaying ? "Pause Musik" : "Mainkan Musik"}
         >
-          {isPlaying ? <CircleStop /> : <CirclePlay />}
+          {isPlaying ? (
+            <CircleStop className="text-gray-800" />
+          ) : (
+            <CirclePlay className="text-gray-800" />
+          )}
         </button>
       )}
     </>
   );
 }
-
-// <section className="w-full min-h-screen bg-[#FFF5F5] flex flex-col items-center justify-center text-center px-4 py-8 relative">
-//   {/* Background image / ornament atas */}
-//   <Image
-//     src="/images/header-ornament.png"
-//     alt="Ornamen Atas"
-//     width={300}
-//     height={100}
-//     className="absolute top-0 left-1/2 transform -translate-x-1/2"
-//   />
-
-//   <div className="text-[#7A2D2D] text-sm mb-4">
-//     <p>Syalom Salam Sejahtera,</p>
-//     <p>
-//       Dengan ini kami ingin mengundang kehadiran <br />
-//       Saudara/i untuk menghadiri acara ulang tahun <br />
-//       anak kami:
-//     </p>
-//   </div>
-
-//   <div className="relative mb-4">
-//     {/* Foto anak */}
-//     <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-pink-300 mx-auto relative z-10">
-//       <Image
-//         src="/images/image-bayi.png"
-//         alt="Foto Bayi"
-//         fill
-//         style={{ objectFit: "cover" }}
-//       />
-//     </div>
-
-//     {/* Mahkota */}
-//     <Image
-//       src="/images/crown.png"
-//       alt="Mahkota"
-//       width={40}
-//       height={40}
-//       className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20"
-//     />
-//   </div>
-
-//   <h2 className="text-2xl font-cursive text-pink-700 mb-2">
-//     Aurilya Prinsya Uada
-//   </h2>
-
-//   <p className="text-sm text-gray-700 mb-6">
-//     Putri tercinta dari <br />
-//     <span className="font-semibold text-[#7A2D2D]">
-//       Adi Uada &amp; Putri Antoko
-//     </span>
-//   </p>
-
-//   <Button
-//     onClick={onOpen}
-//     className="bg-pink-500 hover:bg-pink-600 text-white rounded-full px-6 py-3 shadow-lg"
-//   >
-//     Buka Undangan
-//   </Button>
-// </section>;
