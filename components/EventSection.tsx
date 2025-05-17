@@ -34,9 +34,9 @@ export default function EventSection() {
           <Image
             src="/images/skull.svg" // ganti dengan ikon topi jerami
             alt="Pirate Icon"
-            width={80}
-            height={80}
-            className="absolute -top-10"
+            width={150}
+            height={150}
+            className="absolute -top-30"
           />
         </div>
 
@@ -91,7 +91,7 @@ export default function EventSection() {
         alt="Luffy"
         width={80}
         height={120}
-        className="w-[80px] lg:w-[100px] h-auto absolute bottom-0 left-4"
+        className="w-[80px] lg:w-[120px] h-auto absolute bottom-0 left-4"
       />
 
       {/* Karakter Kanan (Sanji) */}
@@ -100,7 +100,7 @@ export default function EventSection() {
         alt="Sabo"
         width={120}
         height={180}
-        className="w-[120px] lg:w-[150px] h-auto absolute -bottom-1 right-4"
+        className="w-[120px] lg:w-[180px] h-auto absolute -bottom-1 right-4 md:-right-5"
       />
     </section>
   );

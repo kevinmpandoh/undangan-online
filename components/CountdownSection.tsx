@@ -36,75 +36,13 @@ export default function CountdownSection() {
   }, [targetDate]);
 
   return (
-    // <section className="relative bg-[#f5f2e6] py-16 px-4 text-center">
-    //   <div className="absolute top-0 bottom-0 right-0 md:right-12 w-20 md:w-24 z-10">
-    //     <Image
-    //       src={"/images/countDownCard.svg"}
-    //       alt="Luffy"
-    //       width={250}
-    //       height={250}
-    //     />
-    //   </div>
-    //   {/* Karakter Luffy atas */}
-    //   <div className="absolute top-0 right-4 md:right-12 w-20 md:w-24 z-10">
-    //     <Image
-    //       src={"/images/luffy3.svg"}
-    //       alt="Luffy"
-    //       width={120}
-    //       height={120}
-    //     />
-    //   </div>
-
-    //   {/* Judul */}
-    //   <motion.h2
-    //     className="text-3xl md:text-4xl font-black tracking-wide mb-2"
-    //     initial={{ opacity: 0, y: 20 }}
-    //     whileInView={{ opacity: 1, y: 0 }}
-    //     transition={{ duration: 0.6 }}
-    //     viewport={{ once: true }}
-    //   >
-    //     BIRTHDAY PARTY
-    //   </motion.h2>
-
-    //   <p className="text-xl font-semibold text-gray-700 mb-1">
-    //     Kamis <span className="text-red-600 font-bold">29</span> Mei
-    //   </p>
-
-    //   <p className="text-gray-600 mt-2 mb-6 leading-relaxed">
-    //     Ditunggu kehadirannya ya... <br />
-    //     <span className="font-medium">Tuhan Yesus Memberkati</span>
-    //   </p>
-
-    //   {/* Countdown */}
-    //   <div className="flex justify-center items-center gap-3 flex-wrap max-w-md mx-auto">
-    //     <CountdownBox label="Hari" value={timeLeft.days} />
-    //     <CountdownBox label="Jam" value={timeLeft.hours} />
-    //     <CountdownBox label="Menit" value={timeLeft.minutes} />
-    //     <CountdownBox label="Detik" value={timeLeft.seconds} />
-    //   </div>
-
-    //   {/* Robin di kiri bawah */}
-    //   <div className="absolute bottom-2 left-2 md:left-8 w-24 md:w-28 z-10">
-    //     <Image src={"/images/robin.svg"} alt="Robin" width={120} height={120} />
-    //   </div>
-    // </section>
     <section className="relative w-full min-h-screen flex items-center justify-center bg-[#fffff1] px-4 py-16 overflow-hidden">
-      {/* <div className="absolute top-0 right-0 left-0 md:right-12 w-20 md:w-24 z-10">
-        <Image
-          src={"/images/countDownCard.svg"}
-          alt="Luffy"
-          width={250}
-          height={250}
-          // className="w-full h-full object-cover"
-        />
-      </div> */}
-      {/* Karakter Luffy atas */}
-      <div className="absolute top-2 lg:top-13 right-10 md:right-12 w-20 md:w-48 z-10">
+      <div className="absolute -top-6 lg:top-6 right-10 md:right-12 w-30 md:w-60 z-10">
         <Image
           src={"/images/luffy3.svg"}
           alt="Luffy"
-          width={120}
-          height={120}
+          width={150}
+          height={150}
         />
       </div>
       <div className="max-w-md w-full p-6 border-3 border-[#bd9f51] rounded-[40px] shadow-xl relative bg-gradient-to-br from-amber-50 via-white to-amber-100">
@@ -154,18 +92,9 @@ export default function CountdownSection() {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-10 lg:bottom-30 -left-8 md:left-4 w-36 md:w-56 z-10">
+      <div className="absolute bottom-10 lg:bottom-30 -left-8 md:left-4 w-40 md:w-60 z-10">
         <Image src={"/images/robin.svg"} alt="Robin" width={180} height={180} />
       </div>
     </section>
-  );
-}
-
-function CountdownBox({ label, value }: { label: string; value: number }) {
-  return (
-    <div className="bg-[#c8a650] text-white px-4 py-2 rounded-xl shadow-md min-w-[70px]">
-      <div className="text-2xl font-bold">{value}</div>
-      <div className="text-sm">{label}</div>
-    </div>
   );
 }

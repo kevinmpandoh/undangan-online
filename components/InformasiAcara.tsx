@@ -67,7 +67,7 @@ export default function InformasiAcaraSection() {
 
         {/* Tombol Google Maps */}
         <a
-          href="https://maps.app.goo.gl/3PPgQunmPhkAbRzX8" // ganti link sesuai koordinat
+          href="https://maps.app.goo.gl/VvJw16GRmEEPwZZy5?g_st=ac" // ganti link sesuai koordinat
           target="_blank"
           rel="noopener noreferrer"
           className=" flex justify-center items-center gap-2 mt-2 bg-yellow-500 text-white font-medium px-2 py-2 rounded-full hover:bg-yellow-600 transition"
@@ -83,7 +83,7 @@ export default function InformasiAcaraSection() {
           alt="Ship"
           width={150}
           height={150}
-          className="w-24 md:w-48 h-auto"
+          className="w-36 md:w-48 h-auto"
         />
       </div>
     </section>
