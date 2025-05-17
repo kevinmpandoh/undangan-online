@@ -36,8 +36,8 @@ export default function CountdownSection() {
   }, [targetDate]);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center bg-[#fffff1] px-4 py-16 overflow-hidden">
-      <div className="absolute -top-6 lg:top-6 right-10 md:right-12 w-30 md:w-60 z-10">
+    <section className="relative w-full min-h-screen flex items-center justify-center bg-[#faf2e1] px-4 py-16 overflow-hidden">
+      <div className="absolute top-20 lg:top-1 -right-10 md:right-12 w-60 md:w-60 z-10">
         <Image
           src={"/images/luffy3.svg"}
           alt="Luffy"
@@ -92,7 +92,7 @@ export default function CountdownSection() {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-10 lg:bottom-30 -left-8 md:left-4 w-40 md:w-60 z-10">
+      <div className="absolute bottom-40 lg:bottom-30 -left-8 md:left-4 w-60 md:w-60 z-10">
         <Image src={"/images/robin.svg"} alt="Robin" width={180} height={180} />
       </div>
     </section>

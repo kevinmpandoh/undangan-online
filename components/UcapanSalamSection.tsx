@@ -25,14 +25,14 @@ export default function UcapanSalamSection() {
         viewport={{ once: true }}
       >
         {/* Ucapan Salam */}
-        <p className="text-[#92400e] text-md md:text-xl font-medium leading-relaxed mb-4">
+        <p className="text-[#92400e] text-xl md:text-xl font-medium leading-relaxed mb-4">
           Syalom Salam Sejahtera, <br />
           Dengan ini kami ingin mengundang kehadiran Saudara/i <br />
           untuk menghadiri acara Ulang Tahun anak kami:
         </p>
 
         {/* Balon + Bayi */}
-        <div className="relative -top-20 lg:-top-10 mt-4 mb-6">
+        <div className="relative -top-20 xl:-top-10 mt-4 mb-6">
           {/* Balon */}
 
           {/* Bayi */}
@@ -41,39 +41,41 @@ export default function UcapanSalamSection() {
             alt="Baby"
             width={280}
             height={280}
-            className="relative z-10 rounded-full lg:mb-10"
+            className="relative z-10 rounded-full py-20 lg:py-10 "
           />
           {/* Nama Anak */}
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#92400e] mb-1">
+          <h2 className="text-3xl md:text-3xl font-semibold text-[#92400e] mb-1">
             Gabrian Hawkins Supit
           </h2>
 
           {/* Nama Orang Tua */}
-          <p className="text-amber-600 text-md md:text-lg font-light mt-2">
+          <div className="text-amber-600 text-md md:text-lg font-light mt-2 space-y-4">
             <span className="text-sm text-gray-900">Putra Tercinta dari:</span>{" "}
             <br />
-            Alandhika Supit <br /> & <br /> Intan Kairupan
-          </p>
+            <div className="text-center text-xl">
+              Alandhika Supit <br /> & <br /> Intan Kairupan
+            </div>
+          </div>
         </div>
       </motion.div>
 
       {/* Karakter One Piece */}
-      <div className="absolute bottom-0 left-4 w-36 md:w-48">
+      <div className="absolute bottom-0 left-4 w-48 md:w-48">
         <Image
           src={"/images/ussop.svg"}
           alt="Usopp"
           width={80}
           height={80}
-          className="w-[100px] lg:w-[150px] h-auto"
+          className="w-[130px] xl:w-[130px] h-auto"
         />
       </div>
-      <div className="absolute -bottom-8 -right-15 lg:-right-5 w-48 md:w-48">
+      <div className="absolute -bottom-8 -right-15 xl:-right-5 w-56 md:w-48">
         <Image
           src={"/images/chopper.svg"}
           alt="Chopper"
           width={180}
           height={180}
-          className="w-[200px] md:w-[300px] h-auto"
+          className="w-[300px] md:w-[300px] h-auto"
         />
       </div>
     </section>

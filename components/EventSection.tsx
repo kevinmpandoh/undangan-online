@@ -29,14 +29,14 @@ export default function EventSection() {
             width={220}
             height={100}
             alt="Nama"
-            className="w-[180px] lg:w-[280px] h-auto absolute top-10"
+            className="w-[220px] lg:w-[280px] h-auto absolute top-10"
           />
           <Image
             src="/images/skull.svg" // ganti dengan ikon topi jerami
             alt="Pirate Icon"
             width={150}
             height={150}
-            className="absolute -top-30"
+            className="absolute -top-40 lg:-top-30"
           />
         </div>
 
@@ -47,18 +47,18 @@ export default function EventSection() {
             alt="Foto Anak"
             width={250}
             height={250}
-            className="rounded-xl h-[350px] lg:h-[480px] w-auto"
+            className="rounded-xl h-[450px] lg:h-[480px] w-auto"
           />
           <div className="absolute bottom-5 text-center w-full">
             {/* BIRTHDAY PARTY */}
-            <h2 className="text-xl  lg:text-3xl mb-1 tracking-wider font-lilita lg:text-stroke-white font-extrabold text-gray-900">
+            <h2 className="text-3xl  lg:text-2xl mb-1 tracking-wider font-lilita lg:text-stroke-white font-extrabold text-gray-900">
               BIRTHDAY PARTY
             </h2>
 
             {/* Tanggal */}
-            <p className="text-xl lg:text-4xl font-bold text-white font-lilita lg:text-stroke-black">
+            <p className="text-2xl lg:text-3xl font-bold text-white font-lilita lg:text-stroke-black">
               KAMIS,{" "}
-              <span className="text-[#d60000] text-xl lg:text-7xl lg:text-stroke-white">
+              <span className="text-[#d60000] text-5xl lg:text-7xl lg:text-stroke-white">
                 29
               </span>{" "}
               MEI
@@ -73,7 +73,7 @@ export default function EventSection() {
         alt="Balloons Left"
         width={100}
         height={300}
-        className="absolute h-[220px] lg:h-[300px] w-auto -left-8 lg:left-0 top-1/3 z-40"
+        className="absolute h-[240px] lg:h-[300px] w-auto -left-10 lg:left-0 top-1/3 z-40"
       />
 
       {/* Balon Kanan */}
@@ -82,7 +82,7 @@ export default function EventSection() {
         alt="Balloons Right"
         width={100}
         height={300}
-        className="absolute h-[220px] lg:h-[300px] w-auto -right-10 lg:-right-8 top-1/3 z-40"
+        className="absolute h-[230px] lg:h-[300px] w-auto -right-10 lg:-right-4 top-1/3 z-40"
       />
 
       {/* Karakter Kiri (Luffy) */}
@@ -91,7 +91,7 @@ export default function EventSection() {
         alt="Luffy"
         width={80}
         height={120}
-        className="w-[80px] lg:w-[120px] h-auto absolute bottom-0 left-4"
+        className="w-[140px] lg:w-[110px] h-auto absolute bottom-0 left-4"
       />
 
       {/* Karakter Kanan (Sanji) */}
@@ -100,7 +100,7 @@ export default function EventSection() {
         alt="Sabo"
         width={120}
         height={180}
-        className="w-[120px] lg:w-[180px] h-auto absolute -bottom-1 right-4 md:-right-5"
+        className="w-[200px] lg:w-[170px] h-auto absolute -bottom-1 -right-4 md:-right-5"
       />
     </section>
   );

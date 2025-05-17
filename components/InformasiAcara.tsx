@@ -26,7 +26,7 @@ export default function InformasiAcaraSection() {
 
       {/* Konten Utama */}
       <motion.div
-        className="relative z-10 bg-[#f8d77e]/80 border-2 border-[#caa030] rounded-3xl p-8 md:p-12 max-w-md w-full text-center shadow-lg backdrop-blur-sm"
+        className="relative z-10 bg-[#e6b05a] border-2 border-[#caa030] rounded-3xl p-8 md:p-12 max-w-md w-full text-center shadow-lg "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -46,9 +46,9 @@ export default function InformasiAcaraSection() {
           <div className="w-20 h-1 border-b-2"></div>
         </div>
         <div className="text-md lg:text-lg">
-          <span className="text-md text-gray-700 mb-1">Kamis</span>
-          <p className="text-md text-gray-700 mb-1">29 Mei 2025</p>
-          <p className="text-md text-gray-700 mb-4">15.00 - Selesai</p>
+          <span className="text-md text-gray-800 mb-1">Kamis</span>
+          <p className="text-md text-gray-800 mb-1">29 Mei 2025</p>
+          <p className="text-md text-gray-800 mb-4">15.00 - Selesai</p>
         </div>
 
         {/* Ikon Lokasi */}
@@ -70,7 +70,7 @@ export default function InformasiAcaraSection() {
           href="https://maps.app.goo.gl/VvJw16GRmEEPwZZy5?g_st=ac" // ganti link sesuai koordinat
           target="_blank"
           rel="noopener noreferrer"
-          className=" flex justify-center items-center gap-2 mt-2 bg-yellow-500 text-white font-medium px-2 py-2 rounded-full hover:bg-yellow-600 transition"
+          className=" flex justify-center items-center gap-2 mt-2 border-2 text-black text-sm font-light px-2 py-2 rounded-full hover:border-yellow-600 transition"
         >
           <MapPinned size={18} /> <span>OPEN GOOGLE MAPS</span>
         </a>
@@ -83,7 +83,7 @@ export default function InformasiAcaraSection() {
           alt="Ship"
           width={150}
           height={150}
-          className="w-36 md:w-48 h-auto"
+          className="w-48 md:w-48 h-auto"
         />
       </div>
     </section>
