@@ -37,15 +37,15 @@ export default function CountdownSection() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-[#faf2e1] px-4 py-16 overflow-hidden">
-      <div className="absolute top-20 lg:top-1 -right-10 md:right-12 w-60 md:w-60 z-10">
+      {/* <div className="absolute top-20 lg:top-1 -right-10 md:right-12 w-60 md:w-60 z-10">
         <Image
           src={"/images/luffy3.svg"}
           alt="Luffy"
           width={150}
           height={150}
         />
-      </div>
-      <div className="max-w-md w-full p-6 border-3 border-[#bd9f51] rounded-[40px] shadow-xl relative bg-gradient-to-br from-amber-50 via-white to-amber-100">
+      </div> */}
+      <div className="max-w-md w-full  p-6 border-3 border-[#bd9f51] rounded-[40px] shadow-xl relative bg-gradient-to-br from-amber-50 via-white to-amber-100">
         <h2 className="text-4xl text-center font-bold text-amber-700 mb-4 tracking-wide">
           HAWKINS
         </h2>
@@ -92,7 +92,7 @@ export default function CountdownSection() {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-40 lg:bottom-30 -left-8 md:left-4 w-60 md:w-60 z-10">
+      <div className="absolute bottom-0 lg:bottom-30 -left-8 md:left-4 w-60 md:w-60 z-10">
         <Image src={"/images/robin.svg"} alt="Robin" width={180} height={180} />
       </div>
     </section>

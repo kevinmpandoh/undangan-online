@@ -1,8 +1,9 @@
-// components/ReservasiSection.tsx
 "use client";
 
 import { supabase } from "@/lib/supabaseClinet";
 import { useState } from "react";
+import Image from "next/image";
+import bgReservasi from "@/public/images/reservasiBg.png"; // file gambar karakter one piece
 
 export default function ReservasiSection() {
   const [form, setForm] = useState({
@@ -27,10 +28,10 @@ export default function ReservasiSection() {
 
     if (error) {
       console.log(error, "ERROR");
-      alert("Gagal kirim ucapan");
+      alert("Gagal kirim reservasi");
     } else {
-      alert("Berhasil!");
-      setForm({ nama: "", nomor: "", kehadiran: "", jumlah_hadir: 0 });
+      alert("Reservasi berhasil dikirim!");
+      setForm({ nama: "", nomor: "", kehadiran: "", jumlah_hadir: 1 });
       setSubmitted(true);
     }
 
@@ -38,9 +39,23 @@ export default function ReservasiSection() {
   };
 
   return (
-    <section className="py-16 px-8 bg-amber-50 min-h-[80vh] w-full">
-      <div className="px-4 py-8  bg-white/70 rounded-lg shadow-md mx-auto text-center">
-        <h2 className="text-xl font-bold mb-4">Konfirmasi Kehadiran</h2>
+    <section className="relative w-full py-20 bg-amber-50 overflow-hidden">
+      {/* Background karakter */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${bgReservasi.src})`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: "0.5",
+        }}
+      />
+
+      <div className="max-w-md w-[80%] mx-auto bg-[#bc8653]/30  rounded-xl px-6 py-10 shadow-lg text-center border border-yellow-200 relative z-10">
+        <h2 className="text-xl md:text-2xl font-bold mb-6 text-brown-700 font-[Georgia]">
+          Konfirmasi Kehadiran
+        </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4 text-left">
           <input
@@ -49,22 +64,22 @@ export default function ReservasiSection() {
             value={form.nama}
             onChange={(e) => setForm({ ...form, nama: e.target.value })}
             required
-            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300"
+            className="w-full rounded-full bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
           />
 
           <input
             type="tel"
-            placeholder="Nomor WhatsApp"
+            placeholder="No. Wa"
             value={form.nomor}
             onChange={(e) => setForm({ ...form, nomor: e.target.value })}
-            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300"
+            className="w-full rounded-full bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
           />
 
           <select
             value={form.kehadiran}
             onChange={(e) => setForm({ ...form, kehadiran: e.target.value })}
             required
-            className="w-full rounded-lg border border-amber-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300"
+            className="w-full rounded-full bg-yellow-100 px-4 py-3 text-sm focus:outline-none border border-yellow-200"
           >
             <option value="">- Konfirmasi Kehadiran -</option>
             <option value="Hadir">Hadir</option>
@@ -72,8 +87,8 @@ export default function ReservasiSection() {
           </select>
 
           {form.kehadiran === "Hadir" && (
-            <div>
-              <p className="mb-2 font-medium">Jumlah yang akan hadir:</p>
+            <div className="text-sm">
+              <p className="mb-2">Jumlah yang akan hadir:</p>
               <div className="flex gap-4">
                 {[1, 2, 3].map((jumlah) => (
                   <label key={jumlah} className="flex items-center gap-2">
@@ -85,7 +100,7 @@ export default function ReservasiSection() {
                       onChange={() =>
                         setForm({ ...form, jumlah_hadir: jumlah })
                       }
-                      className="accent-pink-600"
+                      className="accent-yellow-500"
                     />
                     {jumlah} Orang
                   </label>
@@ -97,7 +112,7 @@ export default function ReservasiSection() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-amber-600 text-white font-semibold py-2 rounded hover:bg-pink-700"
+            className="w-full bg-amber-500 hover:bg-amber-600 cursor-pointer text-black font-noraml py-2 rounded-full transition-all"
           >
             {loading ? "Mengirim..." : "Kirim Reservasi"}
           </button>

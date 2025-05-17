@@ -70,7 +70,7 @@ export default function InformasiAcaraSection() {
           href="https://maps.app.goo.gl/VvJw16GRmEEPwZZy5?g_st=ac" // ganti link sesuai koordinat
           target="_blank"
           rel="noopener noreferrer"
-          className=" flex justify-center items-center gap-2 mt-2 border-2 text-black text-sm font-light px-2 py-2 rounded-full hover:border-yellow-600 transition"
+          className=" flex justify-center items-center gap-2 mt-2 border-2 text-black hover:text-amber-800 text-sm font-light px-2 py-2 rounded-full hover:border-amber-800 transition"
         >
           <MapPinned size={18} /> <span>OPEN GOOGLE MAPS</span>
         </a>

@@ -1,16 +1,18 @@
 "use client";
-import { MailOpen, Music, Pause } from "lucide-react";
+import { Mail, MailOpen, Music, Pause } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import bgHero from "../public/images/image1.jpg";
 
 interface HeroSectionProps {
   onOpen: () => void;
+  opened: boolean;
   tamuUndangan: string | null;
 }
 
 export default function HeroSection({
   onOpen,
+  opened,
   tamuUndangan,
 }: HeroSectionProps) {
   return (
@@ -33,7 +35,9 @@ export default function HeroSection({
         transition={{ duration: 1 }}
         className="z-30 flex flex-col items-center text-center mt-[280px] text-white px-4"
       >
-        <h1 className="text-4xl md:text-4xl font-bold mb-2">Hawkins Supit</h1>
+        <h1 className="text-4xl text-amber-300 md:text-4xl font-bold mb-2">
+          Hawkins Supit
+        </h1>
         <p className="text-xl md:text-2xl mb-1">BIRTHDAY PARTY</p>
         <p className="mt-4 text-md md:text-lg">Dear :</p>
         <p className="text-2xl md:text-3xl font-semibold italic text-amber-300">
@@ -45,11 +49,18 @@ export default function HeroSection({
 
         <button
           onClick={onOpen}
-          className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full flex items-center gap-2 shadow-lg hover:bg-gray-200 transition"
+          className="mt-6 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black rounded-full flex items-center gap-2 shadow-lg transition"
         >
-          <MailOpen className="text-amber-500" />
+          {opened ? <MailOpen /> : <Mail />}
           BUKA UNDANGAN
         </button>
+
+        {/* <button
+          type="submit"
+          className="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-normal py-2 px-6 rounded-full transition"
+        >
+          KIRIM UCAPAN
+        </button> */}
       </motion.div>
     </section>
   );

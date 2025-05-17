@@ -111,6 +111,7 @@ export default function App() {
     <>
       <HeroSection
         onOpen={handleOpenInvitation}
+        opened={allowScroll}
         tamuUndangan={tamuUndangan ?? "Tamu Undangan"}
       />
 
@@ -125,7 +126,7 @@ export default function App() {
             alt="Aurilya"
             fill
             style={{ objectFit: "cover" }}
-            className="brightness-95"
+            className="brightness-80"
             priority
           />
         </div>
