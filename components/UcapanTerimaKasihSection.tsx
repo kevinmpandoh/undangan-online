@@ -23,7 +23,7 @@ const UcapanTerimaKasihSection = () => {
           Atas Doa dan Kehadiran dari Teman–Teman
         </p>
         <p className="text-lg md:text-xl font-semibold text-amber-900 mb-20">
-          Kami ucapkan banyak terima kasih
+          Kami Ucapkan Banyak Terima Kasih
         </p>
 
         <p className="text-base text-amber-700 mb-4">Kami Yang Mengundang,</p>
@@ -52,7 +52,7 @@ const UcapanTerimaKasihSection = () => {
             @kevin_pandoh
           </a>
           <a
-            href="https://www.instagram.com/shin1331?igsh=MXB6eGpmYXJ3MGJmcg=="
+            href="https://www.instagram.com/_shin1331_?igsh=MXB6eGpmYXJ3MGJmcg=="
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-[#874f0f] font-[cursive] cursor-pointer hover:underline"

@@ -101,8 +101,8 @@ export default function EventSection() {
         src="/images/luffy.svg"
         alt="Luffy"
         width={80}
-        height={120}
-        className="w-[140px] lg:w-[110px] h-auto absolute bottom-0 left-4"
+        height={100}
+        className="w-[130px] lg:w-[110px] h-auto absolute bottom-0 left-4"
       />
 
       {/* Karakter Kanan (Sanji) */}

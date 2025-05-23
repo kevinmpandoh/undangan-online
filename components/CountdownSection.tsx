@@ -68,7 +68,7 @@ export default function CountdownSection() {
           <p className="mt-4 text-amber-700 font-normal">
             Ditunggu kehadirannya yah...
           </p>
-          <p className="text-amber-700 italic mb-6">Tuhan Yesus Memberkati</p>
+          <p className="text-amber-700 mb-6">Tuhan Yesus Memberkati</p>
         </div>
 
         <div className="flex justify-center gap-3">

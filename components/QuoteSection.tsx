@@ -36,7 +36,7 @@ export default function QuoteSection() {
 
         {/* Judul */}
         <h2 className="text-4xl md:text-4xl font-semibold text-[#92400e] py-5 italic mb-6">
-          Kalimat mutiara
+          Kalimat Mutiara
         </h2>
 
         {/* Frame Kutipan */}
