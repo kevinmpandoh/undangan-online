@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import localFont from "next/font/local";
+
 export default function EventSection() {
   return (
     <section className="relative w-full min-h-screen bg-[#faf2e1] flex items-center justify-center overflow-hidden">
@@ -63,9 +65,11 @@ export default function EventSection() {
             </h2>
 
             {/* Tanggal */}
-            <p className="text-2xl lg:text-3xl font-bold text-white font-lilita lg:text-stroke-black">
+            <p className="text-2xl lg:text-3xl font-bold text-white  lg:text-stroke-black">
               KAMIS,{" "}
-              <span className="text-[#d60000] text-5xl lg:text-7xl lg:text-stroke-white">
+              <span
+                className={`text-[#d60000] text-5xl lg:text-6xl lg:text-stroke-white font-latin `}
+              >
                 29
               </span>{" "}
               MEI

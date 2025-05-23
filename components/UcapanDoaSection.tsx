@@ -79,14 +79,14 @@ export default function UcapanDoaSection() {
         alt="Zoro"
         width={120}
         height={120}
-        className="absolute bottom-4 z-30 left-0 w-24"
+        className="absolute bottom-4 z-10 left-0 w-32"
       />
       <Image
         src={"/images/luffy4.svg"}
         alt="Luffy"
         width={120}
         height={120}
-        className="absolute bottom-0 z-30 right-0 w-24"
+        className="absolute bottom-0 z-30 right-0 w-32"
       />
       <Image
         src={"/images/tanah.svg"}

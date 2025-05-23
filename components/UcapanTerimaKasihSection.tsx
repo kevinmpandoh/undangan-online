@@ -19,15 +19,15 @@ const UcapanTerimaKasihSection = () => {
 
       {/* Card utama */}
       <div className="max-w-lg w-[80%] mt-10 mx-auto bg-[#fffff1]/80 backdrop-blur-md border-2 border-[#e1cda3] rounded-xl px-6 py-10 shadow-md relative z-10">
-        <p className="text-lg md:text-xl font-semibold text-amber-900 mb-2">
+        <p className="text-lg md:text-xl font-semibold text-amber-900 my-2">
           Atas Doa dan Kehadiran dari Teman–Teman
         </p>
-        <p className="text-lg md:text-xl font-semibold text-amber-900 mb-8">
+        <p className="text-lg md:text-xl font-semibold text-amber-900 mb-20">
           Kami ucapkan banyak terima kasih
         </p>
 
-        <p className="text-base text-gray-700 mb-1">Kami Yang Mengundang,</p>
-        <h3 className="text-2xl md:text-3xl font-bold text-amber-700 font-[Georgia] mb-4">
+        <p className="text-base text-amber-700 mb-4">Kami Yang Mengundang,</p>
+        <h3 className="text-2xl md:text-4xl font-bold text-amber-700 font-[Georgia] mb-10">
           Hawkins & Family
         </h3>
 
@@ -36,8 +36,8 @@ const UcapanTerimaKasihSection = () => {
           <Image
             src={"/images/bg-kevin.svg"}
             alt="Logo Kondangankuy"
-            width={120}
-            height={120}
+            width={100}
+            height={100}
             className=" object-cover"
           />
         </div>
@@ -47,7 +47,7 @@ const UcapanTerimaKasihSection = () => {
             href="https://www.instagram.com/kevin_pandoh?igsh=d3dkNmlidTA2NWt5"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-amber-600 mt-1 font-[cursive] cursor-pointer hover:underline"
+            className="text-xs text-[#874f0f] font-[cursive] cursor-pointer hover:underline"
           >
             @kevin_pandoh
           </a>
@@ -55,7 +55,7 @@ const UcapanTerimaKasihSection = () => {
             href="https://www.instagram.com/shin1331?igsh=MXB6eGpmYXJ3MGJmcg=="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-amber-600 mt-1 font-[cursive] cursor-pointer hover:underline"
+            className="text-xs text-[#874f0f] font-[cursive] cursor-pointer hover:underline"
           >
             @_shin1331_
           </a>

@@ -32,19 +32,19 @@ export default function UcapanSalamSection() {
         </p>
 
         {/* Balon + Bayi */}
-        <div className="relative -top-20 xl:-top-10 mt-4 mb-6">
+        <div className="relative -top-20 xl:-top-25 mt-4 mb-6">
           {/* Balon */}
 
           {/* Bayi */}
           <Image
             src={"/images/salamImg.svg"} // ganti dengan foto bayi
             alt="Baby"
-            width={280}
-            height={280}
-            className="relative z-10 rounded-full py-20 lg:py-10 "
+            width={350}
+            height={350}
+            className="relative z-10 rounded-full py-10 lg:py-5 "
           />
           {/* Nama Anak */}
-          <h2 className="text-3xl md:text-3xl font-semibold text-[#92400e] mb-1">
+          <h2 className="text-3xl md:text-3xl font-semibold text-[#92400e] mb-5">
             Gabrian Hawkins Supit
           </h2>
 

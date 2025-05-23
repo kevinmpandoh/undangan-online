@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function InformasiAcaraSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center bg-[#fffdf9] px-4 py-16 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center justify-center bg-[#fff] px-4 py-16 overflow-hidden">
       {/* Background Dekoratif */}
       <div
         className="absolute inset-0 bg-cover bg-center"

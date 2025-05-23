@@ -37,16 +37,16 @@ export default function CountdownSection() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-[#faf2e1] px-4 py-16 overflow-hidden">
-      {/* <div className="absolute top-20 lg:top-1 -right-10 md:right-12 w-60 md:w-60 z-10">
-        <Image
-          src={"/images/luffy3.svg"}
-          alt="Luffy"
-          width={150}
-          height={150}
-        />
-      </div> */}
-      <div className="max-w-md w-full  p-6 border-3 border-[#bd9f51] rounded-[40px] shadow-xl relative bg-gradient-to-br from-amber-50 via-white to-amber-100">
-        <h2 className="text-4xl text-center font-bold text-amber-700 mb-4 tracking-wide">
+      <motion.div
+        className="max-w-md w-full  p-6 border-3 border-[#bd9f51] rounded-[40px] shadow-xl relative bg-gradient-to-br from-amber-50 via-white to-amber-100"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        animate={{ y: 0 }}
+        exit={{ y: 20, opacity: 0 }}
+      >
+        <h2 className="text-4xl text-center font-bold text-amber-400 mb-4 tracking-wide">
           HAWKINS
         </h2>
 
@@ -61,11 +61,11 @@ export default function CountdownSection() {
           <p className="text-xl font-medium text-amber-700 my-2 tracking-wide">
             BIRTHDAY PARTY
           </p>
-          <p className="text-sm font-medium text-gray-500">
+          <p className="text-md font-normal text-amber-500">
             KAMIS, 29 MEI 2025
           </p>
 
-          <p className="mt-4 text-amber-700 font-semibold">
+          <p className="mt-4 text-amber-700 font-normal">
             Ditunggu kehadirannya yah...
           </p>
           <p className="text-amber-700 italic mb-6">Tuhan Yesus Memberkati</p>
@@ -91,7 +91,7 @@ export default function CountdownSection() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
       <div className="absolute bottom-0 lg:bottom-30 -left-8 md:left-4 w-60 md:w-60 z-10">
         <Image src={"/images/robin.svg"} alt="Robin" width={180} height={180} />
       </div>
