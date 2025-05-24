@@ -100,9 +100,9 @@ export default function EventSection() {
       <Image
         src="/images/luffy.svg"
         alt="Luffy"
-        width={80}
-        height={100}
-        className="w-[130px] lg:w-[110px] h-auto absolute bottom-0 left-4"
+        width={50}
+        height={80}
+        className="w-[110px] lg:w-[110px] h-auto absolute bottom-0 left-4"
       />
 
       {/* Karakter Kanan (Sanji) */}
@@ -111,7 +111,7 @@ export default function EventSection() {
         alt="Sabo"
         width={120}
         height={180}
-        className="w-[200px] lg:w-[170px] h-auto absolute -bottom-1 -right-4 md:-right-5"
+        className=" w-[170px] sm:w-[200px] lg:w-[170px] h-auto absolute -bottom-1 -right-4 md:-right-5"
       />
     </section>
   );

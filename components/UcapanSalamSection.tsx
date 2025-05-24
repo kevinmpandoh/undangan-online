@@ -6,7 +6,7 @@ import bgSalam from "../public/images/bg-salam.png";
 
 export default function UcapanSalamSection() {
   return (
-    <section className="w-full h-screen py-16 flex justify-center items-start relative overflow-hidden">
+    <section className="w-full py-16 flex justify-center items-start relative overflow-hidden">
       {/* Background bunga halus */}
       <div
         className="absolute inset-0 z-0"
@@ -25,7 +25,7 @@ export default function UcapanSalamSection() {
         viewport={{ once: true }}
       >
         {/* Ucapan Salam */}
-        <p className="text-[#92400e] text-xl md:text-xl font-medium leading-relaxed mb-4">
+        <p className="text-[#92400e] text-md md:text-xl font-medium leading-relaxed mb-4">
           Syalom Salam Sejahtera, <br />
           Dengan ini kami ingin mengundang kehadiran Saudara/i <br />
           untuk menghadiri acara Ulang Tahun anak kami:
@@ -39,12 +39,12 @@ export default function UcapanSalamSection() {
           <Image
             src={"/images/salamImg.svg"} // ganti dengan foto bayi
             alt="Baby"
-            width={350}
-            height={350}
+            width={320}
+            height={320}
             className="relative z-10 rounded-full py-10 lg:py-5 "
           />
           {/* Nama Anak */}
-          <h2 className="text-3xl md:text-3xl font-semibold text-[#92400e] mb-5">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#92400e] mb-5">
             Gabrian Hawkins Supit
           </h2>
 
@@ -52,8 +52,8 @@ export default function UcapanSalamSection() {
           <div className="text-amber-600 text-md md:text-lg font-light mt-2 space-y-4">
             <span className="text-sm text-gray-900">Putra Tercinta dari:</span>{" "}
             <br />
-            <div className="text-center text-xl">
-              Alandhika Supit <br /> & <br /> Intan Kairupan
+            <div className="text-center text-sm">
+              Alandhika Supit & Intan Kairupan
             </div>
           </div>
         </div>
@@ -66,16 +66,16 @@ export default function UcapanSalamSection() {
           alt="Usopp"
           width={80}
           height={80}
-          className="w-[120px] xl:w-[130px] h-auto"
+          className="w-[100px] xl:w-[130px] h-auto"
         />
       </div>
       <div className="absolute -bottom-8 -right-15 xl:-right-5 w-56 md:w-48">
         <Image
           src={"/images/chopper.svg"}
           alt="Chopper"
-          width={180}
-          height={180}
-          className="w-[300px] md:w-[300px] h-auto"
+          width={150}
+          height={150}
+          className="w-[200px] md:w-[300px] h-auto"
         />
       </div>
     </section>

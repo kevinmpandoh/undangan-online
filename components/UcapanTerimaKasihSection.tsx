@@ -18,17 +18,17 @@ const UcapanTerimaKasihSection = () => {
       />
 
       {/* Card utama */}
-      <div className="max-w-lg w-[80%] mt-10 mx-auto bg-[#fffff1]/80 backdrop-blur-md border-2 border-[#e1cda3] rounded-xl px-6 py-10 shadow-md relative z-10">
+      <div className="max-w-lg w-[80%] mt-10 mx-auto bg-[#fffff1]/80 backdrop-blur-md border-2 border-[#e1cda3] rounded-xl px-6 py-5 shadow-md relative z-10">
         <p className="text-lg md:text-xl font-semibold text-amber-900 my-2">
           Atas Doa dan Kehadiran dari Teman–Teman
         </p>
-        <p className="text-lg md:text-xl font-semibold text-amber-900 mb-20">
+        <p className="text-lg md:text-xl font-semibold text-amber-900 mb-5">
           Kami Ucapkan Banyak Terima Kasih
         </p>
 
         <p className="text-base text-amber-700 mb-4">Kami Yang Mengundang,</p>
-        <h3 className="text-2xl md:text-4xl font-bold text-amber-700 font-[Georgia] mb-10">
-          Hawkins & Family
+        <h3 className="text-4xl md:text-4xl font-bold text-amber-700 font-[Georgia] mb-5">
+          Hawkins <br /> & <br /> Family
         </h3>
 
         {/* Logo bundar */}
