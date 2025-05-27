@@ -29,7 +29,7 @@ function InitialAvatar({ name }: { name: string }) {
       .toUpperCase();
 
   return (
-    <div className="w-8 h-8 rounded-full bg-amber-600 flex items-center justify-center text-white font-semibold text-sm shadow">
+    <div className="w-12 h-auto p-1  rounded-full bg-amber-600 flex items-center justify-center text-white font-normal text-xs shadow">
       {getInitial(name)}
     </div>
   );
